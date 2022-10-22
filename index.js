@@ -21,7 +21,7 @@ app.listen(port, function (err) {
     if (err) {
         console.log("Error in running port", err);
     }
-    console.log("server is running successfully on port http://localhost:8000 ");
+    console.log("server is up on port http://localhost:8000 ");
 });
 
 // files last line is here 
