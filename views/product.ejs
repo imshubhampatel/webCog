@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<h1>Sign In</h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mine Form</title>
-</head>
+<form action="/users/create-session" method="POST">
+    <input type="email" name="email" placeholder="Email"  required>
+    <input type="password" name="password" placeholder="Password"  required>
+    <input type="submit" value="Sign In">
 
-<body>
-    <div class="form-container">
-        <form action="/create-session" method="POST" autocomplete="off">
-            <input type="text" name="fname" placeholder="Enter your name"><br><br>
-            <input type="text" name="lname" placeholder="Enter your surename"><br><br>
-            <input type="number" name="phone" placeholder="Enter your Phone"><br><br>
-            <input type="email" name="email" placeholder="Enter your email"><br><br>
-            <input type="submit" value="submit">
-        </form>
-    </div>
-
-</body>
-
-</html>
+</form>
