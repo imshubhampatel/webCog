@@ -1,0 +1,101 @@
+.container{
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 380px;
+    position: absolute;
+    top: 50%;
+    left:70%;
+    transform: translate(-50%,-50%);
+}
+.container-fluid{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background:linear-gradient(to right,rgba(192, 217, 235, 0.548),rgba(46, 143, 167, 0.479)),url("../images/bg.jpg");
+    background-position: 60% 40%;
+    background-repeat: no-repeat;
+}
+.container {
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 26%), 0px 0px 11px 0px rgb(0 0 0 / 13%);
+}
+
+
+input {
+    text-align: center;
+    display: block;
+    width: 60%;
+    height: 20px;
+    padding: 0.3rem 0.2rem;
+    margin: 3rem auto;
+    border: none;
+    border-bottom: 1px dotted #aaa;
+    transition: all 0.3 ease-in-out;
+    background-color: #F9FAFB;
+}
+
+input[type=submit] {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    height: 40px;
+    padding: 0;
+}
+
+input:focus {
+    outline: none;
+    text-decoration-line: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+h1 {
+    display: inline-block;
+    width: 100%;
+    font-size: 3rem;
+    color: #aaa;
+    background-color: #ddd;
+    text-align: center;
+    height: 40px;
+}
+
+form {
+    margin-bottom: 0px;
+}
+
+.container::after {
+    content: "";
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    background: #ddd;
+    margin-bottom: 0;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.image>img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto 0 auto;
+    
+}
+.header-image>img{
+    display: block;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-20%,-50%);
+    
+}
+
+.input-image{
+    display: block;
+    position: absolute;
+    left: 12%;
+}

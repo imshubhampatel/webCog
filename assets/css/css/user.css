@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    background-color: teal;
+    text-align: left;
+}
+
+.my-container{
+    text-align:left;
+}
+.my-container h1,.my-container h2{
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+}
