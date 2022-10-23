@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,800;1,700&display=swap');
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--primary-color: #fbfbfb;
+	--green: #307fe7;
+	--yellow: #0c32db;
+	--darkblue: rgb(23, 185, 190);
+}
+
+body {
+	background-color: #fbfbfb;
+	font-family: "Montserrat", sans-serif;
+}
+
+/*---------################ ----btn styling is starts here-------- ###################### */
+
+.btn-grad {
+	background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
+}
+
+.btn-grad {
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+}
+
+.btn-grad:hover {
+	background-position: right center;
+	/* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*---------################ ----header styling is starts here-------- ###################### */
+
+.header, .my-header {
+	background: url("../images/bg.jpg");
+	width: 100%;
+	height: 80vh;
+}
+
+.my-header {
+	background: linear-gradient(to right,rgba(221, 230, 230, 0.657),rgba(229, 241, 243, 0.315)), url("../images/bg.jpg");
+}
+
+.my-container {
+	font-size: 1.8rem;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.my-container button {
+	display: inline-block;
+	text-align: center;
+}
+
+.my-container button a {
+	color: whitesmoke;
+	text-decoration-line: none;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.logo>a>span>img {
+	border-radius: 50%;
+	width: 50px;
+	margin: 0.8rem 0.5rem;
+	height: 50px;
+}
+
+.logo-and-name {
+	width: 40%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.name {
+	font-size: 1.8rem;
+}
+
+.name>a>span {
+	color: white;
+	letter-spacing: 0.15rem;
+	padding-right: 10px;
+}
+
+.navigation-bar {
+	background-color: var(--darkblue);
+	height: 60px;
+	box-shadow: 1px 6px 10px 5px #ddd;
+	position: sticky;
+}
+
+.navigation-bar ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.navigation-bar a {
+	text-decoration: none;
+	color: var(--green);
+}
+
+.nav-items {
+	width: 50%;
+	padding: 10px 0;
+}
+
+.nav-items a {
+	text-decoration: none;
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-weight: 400;
+	display: block;
+	padding: 15px;
+	margin: 0 8px;
+	border-bottom: 2px solid var(--yellow);
+}
+
+.nav-items a, .nav-items a:after, .nav-items a:before {
+	transition: all .5s;
+}
+
+.nav-items a:hover {
+	color: #555;
+	border-bottom: none;
+}
+
+.nav-items a {
+	position: relative;
+	z-index: 1;
+}
+
+.nav-items a:hover {
+	color: #f1e7eb;
+}
+
+.nav-items a:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	content: '.';
+	color: white;
+	/* background: var(--green); */
+	background: #0c6ddb;
+	visibility: none;
+	opacity: 0;
+	z-index: -1;
+	border-radius: 10px;
+}
+
+.nav-items a:hover:after {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+.nav-items>ul>li>a {
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	padding: 8px;
+}
+
+/* here is something about responsive */
+
+/* ###################__----------making webpage responsive -------------##################/ */
+
+@media (max-width: 1025px) {
+	span {
+		font-size: 1.5rem;
+	}
+	.logo-and-name {
+		width: 40%;
+	}
+	.nav-items {
+		width: 60%;
+	}
+}
+
+@media (max-width: 362px) {
+	.navigation-bar {
+		height: auto;
+	}
+	.logo>a>span>img {
+		width: 50px;
+		height: 50px;
+		margin: 0.5rem auto 0 auto;
+	}
+	.logo-and-name {
+		width: 100%;
+		flex-direction: column;
+		padding: 0 auto;
+		margin: 0 auto;
+	}
+	.name>a>span {
+		font-size: 1.2rem;
+	}
+	.navbar {
+		flex-direction: column;
+		height: auto;
+	}
+	.nav-items {
+		display: block;
+		width: 100%;
+	}
+	.nav-items>ul>li>a {
+		padding: 0;
+		margin: 0 0.5rem;
+		font-size: 10px;
+	}
+}
+
+.footer {
+	width: 100%;
+	height: 90px;
+	background-color: var(--darkblue);
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.text>h2 {
+	color: #22222e;
+	font-weight: 500;
+	letter-spacing: 0.3rem;
+}
+
+footer span {
+	font-size: 3rem;
+	display: inline-block;
+	margin: 4px 8px 0 9px;
+}
