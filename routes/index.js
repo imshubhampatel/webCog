@@ -1,10 +1,11 @@
-const express = require("express");
+const express = require('express');
+const { config } = require('process');
 const router = express.Router();
+const homeController = require("../controller/home_controller")
 
-const homeController = require("../controllers/homeController");
+router.get('/', homeController.home);
+router.use('/user', require("./user"));
 
-router.get("/", homeController.home);
-router.post("/create-session", homeController.createSession);
 
 
 module.exports = router;
